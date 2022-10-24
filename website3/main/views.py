@@ -2,8 +2,12 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
-def index(request):
+def about(request):
     return render(request, 'index.html')
+
+
+def hacks(request):
+    return render(request, 'hacks.html')
 
 
 def asd(request):
@@ -11,4 +15,4 @@ def asd(request):
 
 
 def main(request):
-    return render(request,'Main.html')
+    return render(request, 'Main.html')
