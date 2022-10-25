@@ -1,11 +1,21 @@
 {% extends "base.html" %}
 
-
 {% block title %}
-Page about us
+{{ title }}
 {% endblock %}
 
 {% block content %}
-<h1>ABOUT ABOUT US</h1>
-<p>page about us</p>
+<h1>MAIN</h1>
+{% if tasks %}
+{% for el in tasks %}
+<div class="alert alert-warning mt-2">
+    <h3>{{el.title}}</h3>
+    <p>{{el.task}}</p>
+    <p>{{el.Created_on}}</p>
+    <p>{{el.last_modified}}</p>
+</div>
+{% endfor %}
+{% else %}
+<p>None</p>
+{% endif %}
 {% endblock %}
