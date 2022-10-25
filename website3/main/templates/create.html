@@ -9,6 +9,9 @@ Create new
 <h1>Create new</h1>
 <form method="post">
     {% csrf_token%}
+    {{ form.title }}
+    {{ form.task }}
+    {{ form.theme }}
     <input type="text" placeholder="Name" class="form-control"><br>
     <textarea type="text" placeholder="Description" class="form-control"></textarea><br>
     <textarea type="text" placeholder="Theme" class="form-control"></textarea><br>
