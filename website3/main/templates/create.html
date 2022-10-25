@@ -8,8 +8,10 @@ Create new
 {% block content %}
 <h1>Create new</h1>
 <form method="post">
-    <input type="text" placeholder="Введите название" class="form-control"><br>
-    <textarea type="text" placeholder="description" class="form-control"></textarea><br>
+    {% csrf_token%}
+    <input type="text" placeholder="Name" class="form-control"><br>
+    <textarea type="text" placeholder="Description" class="form-control"></textarea><br>
+    <textarea type="text" placeholder="Theme" class="form-control"></textarea><br>
     <button type="submit" class="btn btn-success">Add</button>
 </form>
 {% endblock %}
