@@ -1,20 +1,19 @@
 {% extends "base.html" %}
 
-
 {% block title %}
 Create new
 {% endblock %}
 
+
 {% block content %}
-<h1>Create new</h1>
-<form method="post">
-    {% csrf_token%}
-    {{ form.title }}
-    {{ form.task }}
-    {{ form.theme }}
-    <input type="text" placeholder="Name" class="form-control"><br>
-    <textarea type="text" placeholder="Description" class="form-control"></textarea><br>
-    <textarea type="text" placeholder="Theme" class="form-control"></textarea><br>
-    <button type="submit" class="btn btn-success">Add</button>
-</form>
+<div class="container">
+    <h1>Create new</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.task }}<br>
+        {{ form.theme }}<br>
+        <button type="submit" class="btn btn-success">Add</button>
+    </form>
+</div>
 {% endblock %}
